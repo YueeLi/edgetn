@@ -5,11 +5,6 @@ let userID = 'c8272f42-f670-4a03-b9fd-23b75c43ed05';
 
 let proxyIP = '';
 
-
-if (!isValidUUID(userID)) {
-	throw new Error('uuid is not valid');
-}
-
 export default {
 	/**
 	 * @param {import("@cloudflare/workers-types").Request} request
@@ -21,6 +16,9 @@ export default {
 		try {
 			userID = env.UUID || userID;
 			proxyIP = env.PROXYIP || proxyIP;
+			if (!isValidUUID(userID)) {
+				return new Response(`uuid is not valid: ${userID}`, { status: 400 });
+			}
 			const upgradeHeader = request.headers.get('Upgrade');
 			if (!upgradeHeader || upgradeHeader !== 'websocket') {
 				const url = new URL(request.url);
