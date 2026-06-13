@@ -9,6 +9,9 @@ compatibility_date = "2026-06-12"
 [vars]
 UUID = "0b25fbd8-9ef2-4c42-9b78-023738b829ed"
 
+[observability]
+enabled = false
+
 [observability.logs]
 enabled = false
 invocation_logs = true
