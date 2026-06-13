@@ -1,5 +1,5 @@
 # wrangler.toml
-name = 'edgetn'
+name = 'edgetn-vless'
 
 #main = "test/worker/worker-connect-test.js"
 main = "src/worker-vless.js"
