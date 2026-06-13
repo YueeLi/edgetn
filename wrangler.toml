@@ -3,6 +3,7 @@ name = 'edgetn'
 
 #main = "test/worker/worker-connect-test.js"
 main = "src/worker-vless.js"
+no_bundle = true
 
 compatibility_date = "2024-11-27"
 
