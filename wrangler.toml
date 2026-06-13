@@ -10,7 +10,7 @@ compatibility_date = "2026-06-12"
 UUID = "0b25fbd8-9ef2-4c42-9b78-023738b829ed"
 
 [observability]
-enabled = false
+enabled = true
 head_sampling_rate = 1
 
 [observability.logs]
